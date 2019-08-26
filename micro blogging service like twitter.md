@@ -1,25 +1,12 @@
 # 6.1 Characteristic of twitter: eventual consistency.
 
-System Design Tutorial Example 6: System design for micro blogging service like twitter prodevelopertutorial February 17, 2019
-In this tutorial we shall discuss about:
-
-1. User should be able to tweet to all of his followers who has >10M followers.
-2. Timeline:
-1. Home Time line: It has all the tweets that you are following.
-2. User Time line: This is specific to specific user timeline
-3. Search Time line: Here user will search for a keyword, user should be able to get all the items in his timeline.
-
-3. Trends
-
-6.1 Characteristic of twitter:
-
 Twitter has 300+M user
 Twitter gets about 600 tweets/sec [write]
 Twitter gets about 60000 reads/sec [read]
 
-Hence the twitter is read heavy. Twitter can have eventual consistency. As twitter supports 140 characters per tweet, there is no need to worry about storage as the price has been reduced, we need to consider scalability to support 60000 reads/sec.
+Hence the twitter is read heavy. Twitter can have eventual consistency.
 
-6.2 How to get all the tweets for a particular user?
+# 6.2 How to get all the tweets for a particular user?
 
 As twitter is read heavy, we need a system that loads the data faster. For this we can use Redis to store the tweets. The structure can be as shown below:
 
