@@ -7,8 +7,7 @@ Twitter gets about 60000 reads/sec [read]
 Hence the twitter is read heavy. Twitter can have eventual consistency.
 
 # 6.2 How to get all the tweets for a particular user?
-
-As twitter is read heavy, we need a system that loads the data faster. For this we can use Redis to store the tweets. The structure can be as shown below:
+use Redis to store the tweets. The structure can be as shown below:
 
 user_id -> user_tweets [1, 2, 3, …]
 Tweet_id -> tweet “Hello world”
